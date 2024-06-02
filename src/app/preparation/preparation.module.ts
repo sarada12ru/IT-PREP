@@ -11,7 +11,7 @@ import { PreparationComponent } from './preparation.component';
   ],
   imports: [
     CommonModule,
-    PreparationRoutingModule
+    PreparationRoutingModule,
   ]
 })
 export class PreparationModule { }
