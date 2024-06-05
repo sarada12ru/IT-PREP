@@ -1,0 +1,17 @@
+<div class="card">
+    <app-label labelName="Techs"/>
+    <p-table [value]="techs">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Tech Name</th>
+                <th>Note</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-tech>
+            <tr>
+                <td>{{ tech.tech }}</td>
+                <td>{{ tech.notes }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

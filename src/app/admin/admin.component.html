@@ -1,0 +1,26 @@
+<p-sidebar [(visible)]="sidebarVisible">
+    <div class="d-grid">
+        <span class="p-2 border m-2 cursor-pointer" routerLink="/admin/tech" (click)="toggleSidebar()">
+            Tech
+        </span>
+        <span class="p-2 border m-2 cursor-pointer" routerLink="/admin/q-set" (click)="toggleSidebar()">
+            Question Set
+        </span>
+        <span class="p-2 border m-2 cursor-pointer" routerLink="/admin/qna" (click)="toggleSidebar()">
+            Q & A
+        </span>
+    </div>
+</p-sidebar>
+
+<div class="header d-flex justify-content-between align-items-center mx-2">
+    <div>
+        <img src="assets/images/logo/cname.png" alt="" width="auto" height="75">
+        <i class="pi pi-align-justify ms-3 cursor-pointer" (click)="toggleSidebar()"></i>
+    </div>
+    <div>
+        Logout
+    </div>
+</div>
+<div class="m-2 h-100">
+    <router-outlet></router-outlet>
+</div>
