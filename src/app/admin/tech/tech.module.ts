@@ -16,7 +16,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     TechRoutingModule,
     PrimeNgModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class TechModule { }

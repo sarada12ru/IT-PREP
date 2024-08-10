@@ -1,0 +1,10 @@
+<i class="pi pi-trash text-danger" style="font-size: 1rem" (click)="showAlert()"></i>
+<p-dialog header="Delete Confirmation" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+    <div>
+        <h6>Are you sure ? You want to delete ?</h6>
+        <div class="d-flex mt-4 justify-content-end align-items-end">
+            <button pButton pRipple label="Confirm" class="p-button-danger" (click)="confirmDelete()"></button>
+            <button pButton pRipple label="Cancel" class="p-button-secondary ms-2" (click)="hideAlert()"></button>
+        </div>
+    </div>
+</p-dialog>
