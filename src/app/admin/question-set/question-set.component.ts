@@ -25,7 +25,6 @@ export class QuestionSetComponent {
   fetchQSets() {
     this.apiService.getQSet()
     .subscribe((res: any) => {
-      console.log(res)
       this.qSets = res.data;
     })
   }
@@ -56,7 +55,7 @@ export class QuestionSetComponent {
   }
 
   removeQSet(id: string) {
-    this.apiService.removeTech(id).subscribe((res: any) => {
+    this.apiService.deleteQSet(id).subscribe((res: any) => {
       if(res.success) {
         this.toast.add({severity: "success", summary: "Success", detail: "Question Set Deleted Successfully !"})
       }

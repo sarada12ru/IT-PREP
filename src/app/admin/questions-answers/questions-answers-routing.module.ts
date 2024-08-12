@@ -9,7 +9,11 @@ const routes: Routes = [
     component: QuestionsAnswersComponent
   },
   {
-    path: ':id',
+    path: 'add-qna/:id',
+    component: AddEditQuestionsAnswersComponent
+  },
+  {
+    path: 'add-qna',
     component: AddEditQuestionsAnswersComponent
   }
 ];

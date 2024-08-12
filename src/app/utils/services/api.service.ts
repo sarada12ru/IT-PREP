@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ITech } from '../interfaces/ITech';
 import { IQSet } from '../interfaces/IQSet';
+import { IQNA } from '../interfaces/iQNA';
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +41,29 @@ export class ApiService {
     return this.http.post(`${this.apiUrl}/q-set/save`, {...data, id});
   }
 
-  // End QSet
+  deleteQSet(id: string) {
+    return this.http.delete(`${this.apiUrl}/q-set/save/:${id}`);
+  }
+
+  // End Tech
+
+  // ==================================================================
+
+  // QNA
+
+  saveQNA(data: IQNA) {
+    return this.http.post(`${this.apiUrl}/qna/list`, data);
+  }
+
+  deleteQNA(id: string) {
+    return this.http.delete(`${this.apiUrl}/qna/delete/:${id}`);
+  }
+
+  listQNAs({tech, questionSet}: {tech: string, questionSet: string}) {
+    return this.http.post(`${this.apiUrl}/qna/list`, {tech, questionSet});
+  }
+
+  // End QNA
+
+  // ==================================================================
 }
